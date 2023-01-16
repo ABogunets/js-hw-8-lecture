@@ -1,1 +1,1 @@
-# goit-js-hw-07
+# gjs-hw-8-lecture
