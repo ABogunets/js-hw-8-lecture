@@ -1,4 +1,5 @@
 //* Тут функції для роботи зі storage
+
 const save = (key, value) => {
   try {
     const serializedData = JSON.stringify(value);
@@ -16,3 +17,5 @@ const load = (key) => {
     console.error(err.message);
   }
 };
+
+export { save, load };

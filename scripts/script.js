@@ -23,14 +23,13 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_todo
     3. написати логіку функції, яка буде діставати дані з стореджа і додавти їх на сторінку у вигляді лішок
     4. написати логіку для видалення таски зі стору і для оновлення стану таски.
 */
+import { addNewTask, handleTaskBehaviour, fillTasksList } from "./functions.js";
 
-// Create a "close" button and append it to each list item
-// var myNodelist = document.getElementsByTagName("LI");
-// var i;
-// for (i = 0; i < myNodelist.length; i++) {
-//   var span = document.createElement("SPAN");
-//   var txt = document.createTextNode("\u00D7");
-//   span.className = "close";
-//   span.appendChild(txt);
-//   myNodelist[i].appendChild(span);
-// }
+const addBtn = document.getElementById('addBtn');
+
+const myUL = document.getElementById('myUL');
+
+addBtn.addEventListener("click", addNewTask);
+myUL.addEventListener("click", handleTaskBehaviour);
+window.addEventListener("DOMContentLoaded", fillTasksList);
+
